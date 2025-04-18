@@ -1,0 +1,13 @@
+# File di sistema
+.DS_Store
+Thumbs.db
+
+# Editor
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Node.js
+node_modules/
+npm-debug.log 
