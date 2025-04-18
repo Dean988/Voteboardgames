@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abruzzo Secret Hitler</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="setup-section" id="setup">
+            <div class="title">
+                <h1>Abruzzo Secret Hitler</h1>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Bundesarchiv_Bild_183-S62600%2C_Adolf_Hitler.jpg/250px-Bundesarchiv_Bild_183-S62600%2C_Adolf_Hitler.jpg" alt="Title Image" class="title-image">
+            </div>
+            <div class="players-form">
+                <h2>Inserisci i giocatori</h2>
+                <div class="input-container">
+                    <input type="text" id="player-name" placeholder="Nome giocatore">
+                    <button id="add-player">Aggiungi</button>
+                </div>
+                <div class="players-info">
+                    <span id="players-count">0 giocatori</span>
+                    <button id="clear-players" class="small-btn">Cancella tutti</button>
+                </div>
+                <ul id="players-list"></ul>
+                <button id="start-game" class="primary-btn">Inizia Partita</button>
+            </div>
+        </div>
+
+        <div class="voting-section hidden" id="voting">
+            <div class="round-info">
+                <h3>Turno <span id="current-round">1</span></h3>
+            </div>
+            <h2>È il turno di: <span id="current-player"></span></h2>
+            <div class="voting-buttons">
+                <button id="vote-yaaaa" class="vote-btn yaaaa">Yaaaa</button>
+                <button id="vote-puzza" class="vote-btn puzza">Puzza di Fascio</button>
+            </div>
+        </div>
+
+        <div class="results-section hidden" id="results">
+            <div class="round-info">
+                <h3>Risultati Turno <span id="result-round">1</span></h3>
+            </div>
+            <h2>Risultati del voto</h2>
+            <div class="results-container">
+                <div class="result">
+                    <h3>Yaaaa</h3>
+                    <span id="yaaaa-count">0</span>
+                </div>
+                <div class="result">
+                    <h3>Puzza di Fascio</h3>
+                    <span id="puzza-count">0</span>
+                </div>
+            </div>
+            
+            <div class="votes-details">
+                <h3>Dettaglio Voti</h3>
+                <div class="votes-table-container">
+                    <table id="votes-table">
+                        <thead>
+                            <tr>
+                                <th>Giocatore</th>
+                                <th>Voto</th>
+                            </tr>
+                        </thead>
+                        <tbody id="votes-tbody">
+                            <!-- Votes will be inserted here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <button id="new-vote" class="secondary-btn">Nuova Votazione</button>
+                <button id="end-game" class="danger-btn">Termina Partita</button>
+            </div>
+        </div>
+        
+        <div class="game-summary hidden" id="game-summary">
+            <h2>Riepilogo Partita</h2>
+            <div id="rounds-summary">
+                <!-- Rounds summary will be inserted here -->
+            </div>
+            <button id="new-game" class="primary-btn">Nuova Partita</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
